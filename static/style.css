@@ -1,0 +1,150 @@
+/* ================= 공용 스타일 ================= */
+/* 배경에 이미지 + 윗부분 어두운 남색 그라데이션 */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 9, 13, 1) 0%,
+      rgba(6, 43, 56, 0.9) 55%,
+      /* 어두운 영역을 39% → 55%로 확장 */ rgba(3, 3, 3, 0) 100%
+    ),
+    url('water-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* 제목 스타일 */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 설명 글 */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* 공용 버튼 스타일 */
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #030303;
+}
+
+/* 링크 스타일 */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+}
+
+/* ================= register.html 전용 스타일 ================= */
+.register-page form {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 15px; /* 버튼 배치 위해 여백 확대 */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width:90%;
+  max-width: 500px;
+  backdrop-filter: blur(4px);
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+
+.register-page .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 15px 20px;
+  text-align: left;
+}
+
+@media (max-width: 600px){
+    .register-page .form-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.register-page form label {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.register-page form input {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+}
+
+.register-page .button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.register-page form button {
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  background-color: white;
+  color: #001f4d;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-page form button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #001f4d;
+}
+
+.register-page .back-link {
+  position: fixed; /* absolute 제거 */
+  bottom:20px;
+  right:20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.register-page .back-link:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.7);
+}
