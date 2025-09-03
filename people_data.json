@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1111",
+    "name": "sye",
+    "gender": 0,
+    "age": 2004,
+    "weight": 55,
+    "disease": "x",
+    "drank": 200,
+    "cold": 0,
+    "password": 1111
+  },
+  {
+    "id": "3333",
+    "name": "honggildong",
+    "gender": 1,
+    "age": 1999,
+    "weight": 89,
+    "disease": "신장결석",
+    "drank": 0,
+    "cold": 1,
+    "password": 3333
+  }
+]
